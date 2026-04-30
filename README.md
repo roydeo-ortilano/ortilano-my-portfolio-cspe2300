@@ -5,14 +5,14 @@ Features light/dark mode, fade-in animations, a contact form via EmailJS, and fu
 
 ## 🚀 Live Demo
 
-[Your Vercel URL here](ortilano-my-portfolio-cspe2300.vercel.app)
+[Live Demo](ortilano-my-portfolio-cspe2300.vercel.app)
+ortilano-my-portfolio-cspe2300.vercel.app
 
 ---
 
 ## 📸 Screenshot
 
 ![Portfolio Screenshot](./screenshots/homepage.png)
-*(Add a screenshot to the `screenshots` folder)*
 
 ---
 
