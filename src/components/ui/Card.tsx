@@ -9,7 +9,7 @@ interface CardProps {
 
 export default function Card({ project }: CardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-cyan-500/20 hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-700">
 
       <img
         src={project.imageUrl}
@@ -17,17 +17,23 @@ export default function Card({ project }: CardProps) {
         className="w-full h-48 object-cover"
       />
 
-      <div className="p-4">
+      <div className="p-5">
 
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+          {project.title}
+        </h3>
 
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        {/* Description */}
+        <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+          {project.description}
+        </p>
 
+        {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="bg-blue-100 text-blue-700 text-sm px-2 py-1 rounded-full"
+              className="bg-slate-100 dark:bg-slate-700 text-cyan-600 dark:text-cyan-400 text-xs px-2.5 py-1 rounded-full font-medium"
             >
               {tech}
             </span>

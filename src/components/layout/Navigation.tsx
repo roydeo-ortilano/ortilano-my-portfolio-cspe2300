@@ -16,7 +16,7 @@ export default function Navigation() {
         <a
           key={item.label}
           href={item.href}
-          className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+          className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium transition-colors"
         >
           {item.label}
         </a>

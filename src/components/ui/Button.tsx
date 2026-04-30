@@ -8,15 +8,20 @@ interface ButtonProps {
 
 export default function Button({ children, onClick, variant = "primary" }: ButtonProps) {
   const styles = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-gray-600 text-white hover:bg-gray-700",
-    outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50",
+    primary:
+      "bg-cyan-500 text-slate-900 hover:bg-cyan-400 active:bg-cyan-600",
+
+    secondary:
+      "bg-slate-600 text-white hover:bg-slate-500 dark:bg-slate-700 dark:hover:bg-slate-600",
+
+    outline:
+      "border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-slate-900 dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-slate-900",
   };
 
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded-md font-medium transition-colors ${styles[variant]}`}
+      className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${styles[variant]}`}
     >
       {children}
     </button>

@@ -16,7 +16,7 @@ export default function FadeIn({ children }: { children: React.ReactNode }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     observer.observe(el);

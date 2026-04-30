@@ -3,6 +3,14 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Roy Ortilano | Portfolio",
@@ -16,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-white dark:bg-gray-900 transition-colors">
+      <body
+        className={`${roboto.variable} font-sans bg-white dark:bg-gray-900 transition-colors`}
+      >
         <ThemeProvider>
           <Header />
           {children}
