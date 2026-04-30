@@ -1,4 +1,4 @@
-# Roy Ortilano – Personal Portfolio
+# Roy Deo B. Ortilano – Personal Portfolio
 
 A modern, responsive portfolio website built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**.
 Features light/dark mode, fade-in animations, a contact form via EmailJS, and full responsiveness.
