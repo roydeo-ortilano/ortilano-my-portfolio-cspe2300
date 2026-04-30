@@ -13,8 +13,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Roy Ortilano | Portfolio",
-  description: "Personal portfolio of Roy Ortilano, Frontend Developer",
+  title: "Roy Deo B. Ortilano | Portfolio",
+  description: "Personal portfolio of Roy Deo B. Ortilano, Frontend Developer",
 };
 
 export default function RootLayout({
