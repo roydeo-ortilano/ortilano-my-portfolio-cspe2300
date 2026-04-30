@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const navItems = [
@@ -12,7 +12,12 @@ const navItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { dark, toggleDark } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 bg-white dark:bg-gray-900 shadow-md z-50 transition-colors">
@@ -38,14 +43,14 @@ export default function Header() {
             className="text-xl px-2 py-1 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle dark mode"
           >
-            {dark ? "Sun" : "Moon"}
+            {mounted ? (dark ? "☀️" : "🌙") : "🌙"}
           </button>
 
           <button
             className="md:hidden text-gray-600 dark:text-gray-300"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? "X" : "Menu"}
+            {menuOpen ? "✕" : "☰"}
           </button>
         </div>
       </div>
